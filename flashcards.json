@@ -299,5 +299,69 @@
         "definition": "(v) memamerkan dengan sombong.",
         "synonym": "show off, display, parade",
         "example": "He would always flaunt his expensive new car to make his friends envious."
+    },
+    //entri baru 12/08/2025
+    {
+        "word": "revered",
+        "type": "adjective/verb",
+        "definition": "(adj/v) sangat dihormati atau dipuja.",
+        "synonym": "respected, admired, venerated, honored",
+        "example": "The teacher was revered by all her students for her dedication and kindness."
+    },
+    {
+        "word": "glean",
+        "type": "verb",
+        "definition": "(v) mengumpulkan informasi atau fakta sedikit demi sedikit.",
+        "synonym": "gather, collect, extract, obtain",
+        "example": "The journalist tried to glean as much information as possible from the witnesses."
+    },
+    {
+        "word": "hither",
+        "type": "adverb",
+        "definition": "(adv) ke sini; menuju tempat ini.",
+        "synonym": "to this place, here",
+        "example": "He beckoned her hither with a wave of his hand."
+    },
+    {
+        "word": "heeding",
+        "type": "verb",
+        "definition": "(v) memperhatikan atau mematuhi nasihat, peringatan, atau instruksi.",
+        "synonym": "paying attention, obeying, noticing, minding",
+        "example": "He is not heeding the doctor's advice to rest."
+    },
+    {
+        "word": "rattled",
+        "type": "adjective/verb",
+        "definition": "(adj/v) gugup atau terguncang karena sesuatu; berbunyi bergetar.",
+        "synonym": "shaken, unnerved, disturbed, unsettled",
+        "example": "She was visibly rattled by the unexpected question."
+    },
+    {
+        "word": "otherworldly",
+        "type": "adjective",
+        "definition": "(adj) seperti berasal dari dunia lain; sangat asing atau tidak biasa.",
+        "synonym": "unearthly, supernatural, mystical, ethereal",
+        "example": "The landscape had an otherworldly beauty after the snowfall."
+    },
+    {
+        "word": "divert",
+        "type": "verb",
+        "definition": "(v) mengalihkan arah atau perhatian.",
+        "synonym": "redirect, turn aside, deflect, distract",
+        "example": "The police had to divert traffic because of the accident."
+    },
+    {
+        "word": "bitterness",
+        "type": "noun",
+        "definition": "(n) rasa pahit; perasaan benci atau dendam.",
+        "synonym": "resentment, acrimony, animosity, hostility",
+        "example": "There was a hint of bitterness in his voice when he spoke about his past."
+    },
+    {
+        "word": "perished",
+        "type": "verb",
+        "definition": "(v) mati; binasa; hancur.",
+        "synonym": "died, passed away, succumbed, expired",
+        "example": "Many plants perished during the severe drought."
     }
 ]
