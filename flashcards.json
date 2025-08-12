@@ -460,6 +460,20 @@
     "definition": "(n) kesulitan atau keadaan yang tidak menguntungkan.",
     "synonym": "hardship, difficulty, misfortune",
     "example": "He showed great courage in the face of adversity."
+    },
+    {
+    "word": "recursive",
+    "type": "adjective",
+    "definition": "(adj) bersifat mengulang dirinya sendiri; berulang secara berurutan di dalam dirinya.",
+    "synonym": "repetitive, looping, iterative",
+    "example": "The function is recursive because it calls itself during execution."
+    },
+    {
+    "word": "deter",
+    "type": "verb",
+    "definition": "(v) mencegah atau menghalangi seseorang melakukan sesuatu, terutama dengan menimbulkan rasa takut atau ragu.",
+    "synonym": "discourage, prevent, inhibit",
+    "example": "Strict laws are designed to deter people from committing crimes."
     }
     
 ]
