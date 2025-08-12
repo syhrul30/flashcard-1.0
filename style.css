@@ -1,0 +1,213 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* === PERUBAHAN UTAMA: Variabel Warna untuk Tema === */
+:root {
+    /* Warna Kategori */
+    --verb-color: #3498db;
+    --noun-color: #e74c3c;
+    --adjective-color: #2ecc71;
+    --adverb-color: #8e44ad;
+
+    /* Variabel Tema Terang (Light Mode) */
+    --bg-gradient-start: #667eea;
+    --bg-gradient-end: #764ba2;
+    --text-primary: #fff;
+    --text-secondary: #333;
+    --text-muted: #555;
+    --card-bg: #fff;
+    --dropdown-bg: rgba(255, 255, 255, 0.9);
+    --dropdown-text: #555;
+    --dropdown-menu-bg: #f9f9f9;
+    --dropdown-item-hover-bg: #f1f1f1;
+    --search-bg: rgba(255, 255, 255, 0.1);
+    --search-border: rgba(255, 255, 255, 0.5);
+    --search-focus-border: #fff;
+    --legend-bg: rgba(255, 255, 255, 0.2);
+    --shadow-color: rgba(0,0,0,0.1);
+    --card-back-verb: #eaf4fc;
+    --card-back-noun: #fdedec;
+    --card-back-adjective: #eafaf1;
+    --card-back-adverb: #f4eef7;
+}
+
+/* Variabel Tema Gelap (Dark Mode) */
+body.dark-mode {
+    --bg-gradient-start: #232526;
+    --bg-gradient-end: #414345;
+    --text-primary: #e2e8f0;
+    --text-secondary: #e2e8f0;
+    --text-muted: #a0aec0;
+    --card-bg: #121212;
+    --dropdown-bg: #4a5568;
+    --dropdown-text: #e2e8f0;
+    --dropdown-menu-bg: #2d3748;
+    --dropdown-item-hover-bg: #4a5568;
+    --search-bg: rgba(0, 0, 0, 0.2);
+    --search-border: rgba(255, 255, 255, 0.3);
+    --search-focus-border: var(--verb-color);
+    --legend-bg: rgba(0, 0, 0, 0.2);
+    --shadow-color: rgba(0,0,0,0.4);
+    --card-back-verb: #2c3e50;
+    --card-back-noun: #4d3a3a;
+    --card-back-adjective: #2c4a3b;
+    --card-back-adverb: #4a2c4a;
+}
+
+/* Reset dan Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+    margin: 0;
+    color: var(--text-secondary);
+    padding: 2rem;
+    box-sizing: border-box;
+    min-height: 100vh;
+    transition: background 0.5s, color 0.5s;
+}
+
+/* Container Utama & Header */
+.container { width: 100%; max-width: 1200px; margin: 0 auto; text-align: center; }
+.header { display: flex; justify-content: center; align-items: center; gap: 20px; position: relative; }
+.main-title { color: var(--text-primary); margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); font-size: 2.5rem; }
+.card-count { color: var(--text-primary); margin-top: -1rem; margin-bottom: 1.5rem; font-size: 1rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); opacity: 0.9; transition: opacity 0.3s ease; }
+
+/* Tombol Tema */
+.theme-toggle-btn { background: none; border: none; cursor: pointer; padding: 5px; color: var(--text-primary); display: flex; align-items: center; justify-content: center; }
+.theme-toggle-btn .sun-icon { display: none; }
+.theme-toggle-btn .moon-icon { display: block; }
+body.dark-mode .theme-toggle-btn .sun-icon { display: block; }
+body.dark-mode .theme-toggle-btn .moon-icon { display: none; }
+
+/* Search Bar */
+.search-container { margin-bottom: 1.5rem; display: flex; justify-content: center; }
+.search-bar { width: 100%; max-width: 500px; padding: 12px 20px; font-size: 1rem; font-family: 'Poppins', sans-serif; border: 2px solid var(--search-border); border-radius: 50px; background-color: var(--search-bg); color: var(--text-primary); outline: none; transition: all 0.3s ease; }
+.search-bar::placeholder { color: rgba(255, 255, 255, 0.7); }
+body.dark-mode .search-bar::placeholder { color: rgba(255, 255, 255, 0.4); }
+.search-bar:focus { border-color: var(--search-focus-border); }
+
+/* Dropdown Controls */
+.dropdown-controls { display: flex; justify-content: center; gap: 15px; margin-bottom: 2rem; flex-wrap: wrap; }
+.dropdown-wrapper { position: relative; display: inline-block; }
+.dropdown-btn { background-color: var(--dropdown-bg); color: var(--dropdown-text); padding: 12px 25px; font-size: 1rem; font-weight: 600; font-family: 'Poppins', sans-serif; border: none; border-radius: 50px; cursor: pointer; min-width: 200px; text-align: center; box-shadow: 0 4px 15px var(--shadow-color); transition: all 0.3s ease; }
+.dropdown-btn:hover { filter: brightness(1.1); box-shadow: 0 6px 20px var(--shadow-color); transform: translateY(-2px); }
+.dropdown-menu { display: none; position: absolute; background-color: var(--dropdown-menu-bg); min-width: 200px; box-shadow: 0px 8px 16px 0px var(--shadow-color); z-index: 100; border-radius: 15px; padding: 10px 0; margin-top: 8px; animation: fadeIn 0.3s ease; overflow: hidden; }
+.dropdown-menu.show { display: block; }
+.dropdown-item { color: var(--text-secondary); padding: 12px 16px; text-decoration: none; display: block; font-weight: 500; transition: all 0.2s; }
+.dropdown-item:hover { background-color: var(--dropdown-item-hover-bg); }
+#filter-options .dropdown-item[data-filter="verb"]:hover { background-color: var(--verb-color); color: white; }
+#filter-options .dropdown-item[data-filter="noun"]:hover { background-color: var(--noun-color); color: white; }
+#filter-options .dropdown-item[data-filter="adjective"]:hover { background-color: var(--adjective-color); color: white; }
+#filter-options .dropdown-item[data-filter="adverb"]:hover { background-color: var(--adverb-color); color: white; }
+#filter-dropdown-btn.filter-active-verb { background-color: var(--verb-color); color: white; }
+#filter-dropdown-btn.filter-active-noun { background-color: var(--noun-color); color: white; }
+#filter-dropdown-btn.filter-active-adjective { background-color: var(--adjective-color); color: white; }
+#filter-dropdown-btn.filter-active-adverb { background-color: var(--adverb-color); color: white; }
+
+/* Grid & Animasi */
+.flashcard-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+@keyframes fadeOut { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(0.9); } }
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+.fade-out { animation: fadeOut 0.4s ease-out forwards; }
+.fade-in { animation: fadeIn 0.4s ease-in forwards; }
+
+/* Flashcard */
+.flashcard { background-color: var(--card-bg); min-height: 280px; perspective: 1000px; border-radius: 15px; box-shadow: 0 8px 25px var(--shadow-color); transition: transform 0.3s, background-color 0.5s; display: flex; min-width: 0; }
+.flashcard:hover { transform: translateY(-5px); }
+.flashcard-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.7s; transform-style: preserve-3d; cursor: pointer; }
+.flashcard.flipped .flashcard-inner { transform: rotateY(180deg); }
+.flashcard-face { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; -webkit-backface-visibility: hidden; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; box-sizing: border-box; border-radius: 15px; }
+.flashcard-back { transform: rotateY(180deg); display: block; overflow: hidden; }
+.back-content { padding: 20px; text-align: left; height: 100%; overflow-y: auto; box-sizing: border-box; }
+.word { font-size: 2.2rem; font-weight: 700; word-break: break-all;       /* Memaksa kata panjang dibungkus */
+    hyphens: auto;}
+.definition { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+.synonym { font-size: 1rem; color: var(--text-secondary); margin-bottom: 0.75rem; font-weight: 400; }
+.example { font-size: 0.95rem; font-style: italic; color: var(--text-muted); }
+
+/* Sistem Border */
+.flashcard-front { border: none; overflow: hidden; padding: 0; justify-content: center; align-items: center; }
+.flashcard-front::before { content: ''; position: absolute; top: 8px; left: 0; right: 0; bottom: 0; background-color: var(--card-bg); border-radius: 13px; transition: background-color 0.5s; }
+.word { position: relative; z-index: 1; }
+.verb .flashcard-front { background: var(--verb-color); }
+.noun .flashcard-front { background: var(--noun-color); }
+.adjective .flashcard-front { background: var(--adjective-color); }
+.adverb .flashcard-front { background: var(--adverb-color); }
+.verb .word { color: var(--verb-color); }
+.noun .word { color: var(--noun-color); }
+.adjective .word { color: var(--adjective-color); }
+.adverb .word { color: var(--adverb-color); }
+.verb .flashcard-back { background-color: var(--card-back-verb); }
+.noun .flashcard-back { background-color: var(--card-back-noun); }
+.adjective .flashcard-back { background-color: var(--card-back-adjective); }
+.adverb .flashcard-back { background-color: var(--card-back-adverb); }
+
+/* Gradien Multi-Kategori */
+.multi-category .word { -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; }
+.noun-verb .flashcard-front { background: linear-gradient(to right, var(--noun-color), var(--verb-color)); }
+.noun-verb .word { background-image: linear-gradient(to right, var(--noun-color), var(--verb-color)); }
+.adjective-noun .flashcard-front { background: linear-gradient(to right, var(--adjective-color), var(--noun-color)); }
+.adjective-noun .word { background-image: linear-gradient(to right, var(--adjective-color), var(--noun-color)); }
+.adverb-noun .flashcard-front { background: linear-gradient(to right, var(--adverb-color), var(--noun-color)); }
+.adverb-noun .word { background-image: linear-gradient(to right, var(--adverb-color), var(--noun-color)); }
+.adjective-verb .flashcard-front { background: linear-gradient(to right, var(--adjective-color), var(--verb-color)); }
+.adjective-verb .word { background-image: linear-gradient(to right, var(--adjective-color), var(--verb-color)); }
+.adverb-verb .flashcard-front { background: linear-gradient(to right, var(--adverb-color), var(--verb-color)); }
+.adverb-verb .word { background-image: linear-gradient(to right, var(--adverb-color), var(--verb-color)); }
+.adjective-adverb .flashcard-front { background: linear-gradient(to right, var(--adjective-color), var(--adverb-color)); }
+.adjective-adverb .word { background-image: linear-gradient(to right, var(--adjective-color), var(--adverb-color)); }
+.adjective-noun-verb .flashcard-front { background: linear-gradient(to right, var(--adjective-color), var(--noun-color), var(--verb-color)); }
+.adjective-noun-verb .word { background-image: linear-gradient(to right, var(--adjective-color), var(--noun-color), var(--verb-color)); }
+
+/* Legenda */
+.legend-container { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 2rem; color: var(--text-primary); font-size: 0.9rem; }
+.legend-item { display: flex; align-items: center; gap: 8px; background-color: var(--legend-bg); padding: 5px 12px; border-radius: 20px; }
+.legend-color { width: 15px; height: 15px; border-radius: 50%; display: inline-block; }
+.legend-color.verb { background-color: var(--verb-color); }
+.legend-color.noun { background-color: var(--noun-color); }
+.legend-color.adjective { background-color: var(--adjective-color); }
+.legend-color.adverb { background-color: var(--adverb-color); }
+.legend-color.multi { background: linear-gradient(45deg, var(--noun-color), var(--verb-color), var(--adjective-color)); }
+
+/* Tombol Scroll ke Header */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.3); /* semi transparan putih */
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    padding: 10px 15px;
+    border-radius: 10px; /* kotak dengan sudut melengkung */
+    cursor: pointer;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    opacity: 0; /* awalnya tidak terlihat */
+    visibility: hidden; /* supaya tidak bisa diklik saat sembunyi */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 999;
+}
+
+/* Saat tombol ditampilkan */
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .scroll-top-btn {
+    background-color: rgba(0, 0, 0, 0.4); /* hitam transparan */
+    border: 2px solid rgba(255, 255, 255, 0.6); /* garis luar tetap putih semi transparan */
+    color: white;
+}
+
+body.dark-mode .scroll-top-btn:hover {
+    background-color: rgba(255, 190, 36, 0.6);
+}
+/* Responsif */
+@media (max-width: 600px) { body { padding: 1rem; } .main-title { font-size: 2rem; } .flashcard-grid { grid-template-columns: 1fr; } }
+
+
