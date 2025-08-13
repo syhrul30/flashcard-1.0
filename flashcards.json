@@ -474,6 +474,76 @@
     "definition": "(v) mencegah / menghalangi seseorang melakukan sesuatu, terutama dengan menimbulkan rasa takut atau ragu.",
     "synonym": "discourage, prevent, inhibit",
     "example": "Strict laws are designed to deter people from committing crimes."
-    }
+    },
+    {
+  "word": "prevail",
+  "type": "verb",
+  "definition": "(v) menang atau unggul; berhasil mengatasi sesuatu.",
+  "synonym": "triumph, succeed, overcome, win",
+  "example": "Justice will prevail in the end."
+},
+{
+  "word": "averted",
+  "type": "verb",
+  "definition": "(v) berhasil mencegah atau menghindari sesuatu yang buruk.",
+  "synonym": "prevented, avoided, warded off",
+  "example": "Disaster was averted thanks to quick action."
+},
+{
+  "word": "inconsequential",
+  "type": "adjective",
+  "definition": "(adj) tidak penting; tidak berpengaruh besar.",
+  "synonym": "insignificant, trivial, minor",
+  "example": "The mistake was inconsequential and did not affect the results."
+},
+{
+  "word": "infallible",
+  "type": "adjective",
+  "definition": "(adj) tidak pernah salah; selalu benar.",
+  "synonym": "unerring, flawless, perfect",
+  "example": "No one is infallible; everyone makes mistakes."
+},
+{
+  "word": "deception",
+  "type": "noun",
+  "definition": "(n) penipuan; tindakan menipu atau memperdaya.",
+  "synonym": "fraud, trickery, deceit",
+  "example": "He was accused of deception in his business dealings."
+},
+{
+  "word": "dwelling",
+  "type": "noun",
+  "definition": "(n) tempat tinggal; rumah.",
+  "synonym": "residence, home, abode",
+  "example": "The ancient dwelling was discovered by archaeologists."
+},
+{
+  "word": "confined",
+  "type": "adjective",
+  "definition": "(adj) terbatas; terkurung di suatu tempat.",
+  "synonym": "restricted, limited, imprisoned",
+  "example": "The patient was confined to bed for two weeks."
+},
+{
+  "word": "shrouded",
+  "type": "verb",
+  "definition": "(v) diselimuti atau ditutupi sepenuhnya.",
+  "synonym": "covered, enveloped, concealed",
+  "example": "The mountain was shrouded in mist."
+},
+{
+  "word": "prominent",
+  "type": "adjective",
+  "definition": "(adj) menonjol; mudah terlihat atau dikenal.",
+  "synonym": "conspicuous, notable, distinguished",
+  "example": "She is a prominent figure in the community."
+},
+{
+  "word": "imbued",
+  "type": "verb",
+  "definition": "(v) dipenuhi atau dibekali dengan perasaan atau kualitas tertentu.",
+  "synonym": "filled, saturated, permeated",
+  "example": "Her writing is imbued with optimism."
+}
     
 ]
